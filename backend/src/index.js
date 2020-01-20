@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const routes = require('./routes')
 
 const app = express()
 
@@ -17,9 +18,6 @@ mongoose.connect('mongodb+srv://omnistack10:omnistack10@omnistack-4xggp.mongodb.
 // Body: req.body (Dados para a criação ou alteração de um registro)
 
 app.use(express.json())
-
-app.get('/', (req, res) => {
-  return res.json({ mensagem: 'Olá mundo' })
-})
+app.use(routes)
 
 app.listen(3333)
