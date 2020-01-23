@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const routes = require('./routes')
 
 const app = express()
@@ -17,6 +18,7 @@ mongoose.connect('mongodb+srv://omnistack10:omnistack10@omnistack-4xggp.mongodb.
 // Route Params: req.params (Identificar um recurso na alteração ouremoção)
 // Body: req.body (Dados para a criação ou alteração de um registro)
 
+app.use(cors({ origin: 'http://localhost:3000' }))
 app.use(express.json())
 app.use(routes)
 
