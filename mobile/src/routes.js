@@ -30,16 +30,3 @@ const Routes = createAppContainer(
 )
 
 export default Routes
-
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-// import { createStackNavigator } from 'react-navigation-stack';
-
-// const Routes =  createStackNavigator({
-//   Main: MainScreen,
-//   Profile: ProfileScreen,
-// }, {
-//   initialRouteName: 'Main',
-// });
-
-// export default Routes
