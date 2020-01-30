@@ -1,9 +1,15 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const http = require('http')
 const cors = require('cors')
+
 const routes = require('./routes')
+const { setupWebsocket } = require('./websocket')
 
 const app = express()
+const server = http.Server(app)
+
+setupWebsocket(server)
 
 mongoose.connect('mongodb+srv://omnistack10:omnistack10@omnistack-4xggp.mongodb.net/test?retryWrites=true&w=majority', {
   useUnifiedTopology: true,
@@ -18,8 +24,8 @@ mongoose.connect('mongodb+srv://omnistack10:omnistack10@omnistack-4xggp.mongodb.
 // Route Params: req.params (Identificar um recurso na alteração ouremoção)
 // Body: req.body (Dados para a criação ou alteração de um registro)
 
-app.use(cors({ origin: 'http://localhost:3000' }))
+app.use(cors(/*{ origin: 'http://localhost:3000' }*/))
 app.use(express.json())
 app.use(routes)
 
-app.listen(3333)
+server.listen(3333)
