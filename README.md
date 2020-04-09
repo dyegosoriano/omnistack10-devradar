@@ -9,7 +9,7 @@ O DevRadar é um projeto que visa conectar desenvolvedores próximos a você que
 
 Para clonar o repositório, execute o seguinte comando no terminal:
 
-```git clone https://github.com/dyegosoriano/omnistack10-devradar.git```
+```git clone https://github.com/dyegosoriano/DevRadar.git```
 
 # Instalação
 
@@ -70,3 +70,7 @@ Além disso, é muito importante entender como a página web normalmente se comu
 # Mobile
 
 Desenvolvido com o framework React Native e com o Expo.
+
+# Licença
+
+Esse projeto está sob a licença MIT.
