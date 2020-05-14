@@ -2,5 +2,9 @@ backend/node_modules/*
 frontend/node_modules/*
 mobile/node_modules/*
 
+backend/yarn.lock
+frontend/yarn.lock
+mobile/yarn.lock
+
 .DS_Store
 .vscode/
